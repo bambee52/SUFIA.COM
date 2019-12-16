@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li,
+ul {
+    list-style: none;
+}
+#slide3 {
+    height: 200;
+    position: relative;
+    overflow: hidden;
+}
+#slide3 ul {
+    width: 400%;
+    height: 100%;
+    transition: 1s;
+}
+#slide3 ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#slide3 li {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#slide3 input {
+    display: none;
+}
+#slide3 label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #666;
+    background: #fff;
+    transition: 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#slide3 .pos3 {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+#pos8:checked~ul {
+    margin-left: 0;
+}
+#pos9:checked~ul {
+    margin-left: -100%;
+}
+#pos10:checked~ul {
+    margin-left: -200%;
+}
+
+#pos8:checked~.pos3 > label:nth-child(1) {
+    background: #666;
+}
+#pos9:checked~.pos3 > label:nth-child(2) {
+    background: #666;
+}
+#pos10:checked~.pos3 > label:nth-child(3) {
+    background: #666;
+}
